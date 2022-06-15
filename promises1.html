@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 1</title>
+    </head>
+    <body>
+        <script>
+            function findNumber(number){
+                return new Promise((resolve,reject) =>{
+                    if(!isNaN(number)){
+                        resolve("It's a number");
+                    }else{
+                        reject("Not a number");
+                    }
+                });
+            }
+            async function findResult(n){
+                try{
+                var res = await findNumber(n);
+                console.log(res);
+                }
+                catch(err){
+                    console.log(err);
+                }
+            }
+            findResult("abd");
+        </script>
+    </body>
+</html>
